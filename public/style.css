@@ -1,0 +1,168 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 0; /* Header handles its own padding */
+    padding-bottom: 80px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* HEADER UI */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f1f8ff; /* Soft blue accent */
+    border-bottom: 1px solid #e1e4e8;
+    margin-bottom: 20px;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 800;
+    color: #007bff;
+    margin: 0;
+}
+
+#welcome-msg {
+    display: block;
+    font-size: 13px;
+    color: #586069;
+    margin-top: 2px;
+}
+
+/* CARDS & SPACING */
+.card {
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 20px 20px 20px;
+}
+
+h3 {
+    margin: 0 20px 15px 20px;
+    font-size: 18px;
+    color: #24292e;
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d5da;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* BUTTONS */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.btn:active { filter: brightness(0.9); }
+
+.primary-btn { background-color: #007bff; color: white; }
+.secondary-btn { background-color: #28a745; color: white; }
+.small-btn { width: auto; padding: 6px 12px; font-size: 12px; background-color: #dc3545; color: white; margin-left: 10px; }
+
+/* ERROR TEXT */
+.error-text { color: #d73a49; font-size: 14px; text-align: center; margin-top: 5px; }
+
+/* TAB SYSTEM */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
+    background: white;
+    display: flex;
+    border-top: 1px solid #e1e4e8;
+    height: 65px;
+    z-index: 100;
+}
+
+.nav-item {
+    flex: 1;
+    border: none;
+    background: none;
+    color: #6a737d;
+    font-size: 11px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item.active {
+    color: #007bff;
+    font-weight: 700;
+    border-top: 3px solid #007bff;
+}
+
+/* LIST ITEMS */
+.item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px;
+    border: 1px solid #e1e4e8;
+    border-radius: 10px;
+    margin: 0 20px 10px 20px;
+}
+
+.check-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* NOTIFICATIONS & ACTIVITY */
+.notification-card {
+    border-left: 4px solid #f39c12;
+    padding: 12px;
+    background: #fff;
+    margin: 0 20px 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border-top: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;
+}
+
+.notify-header { display: flex; justify-content: space-between; margin-bottom: 6px; }
+.notify-type { font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 4px; }
+.notify-motivation { background: #e3f2fd; color: #1976d2; }
+.notify-friend { background: #f1f8e9; color: #388e3c; }
+.notify-time { font-size: 11px; color: #888; }
+
+.progress-bar { height: 6px; background: #e1e4e8; border-radius: 3px; overflow: hidden; margin-top: 8px; }
+.progress-fill { height: 100%; background: #007bff; transition: width 0.4s; }
