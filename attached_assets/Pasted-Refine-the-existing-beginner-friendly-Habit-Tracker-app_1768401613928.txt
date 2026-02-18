@@ -1,0 +1,133 @@
+Refine the existing beginner-friendly Habit Tracker app with the following changes.
+All code must remain simple, readable, and understandable by a beginner.
+
+--------------------------------------------------
+APP BRANDING & HEADER UI
+--------------------------------------------------
+- Rename the app from "Tracker App" to "Habit Flow"
+- Top header should include:
+  - App name: Habit Flow (top left)
+  - Greeting text: "Hi, <username>" near the top
+  - Logout button on the right
+- Add spacing so the greeting text is not too close to the logout button
+- Keep the header clean but add light color styling (soft background color or accent bar)
+
+--------------------------------------------------
+AUTHENTICATION FLOW
+--------------------------------------------------
+LOGIN PAGE:
+- Contains email/username and password fields
+- Login button
+- Register link or button
+
+REGISTER PAGE (SEPARATE SCREEN):
+- Username field
+- Password field
+- Confirm password field
+- Basic validation:
+  - Passwords must match
+- After successful registration:
+  - Redirect to login page
+
+Each registered account must:
+- Be stored in SQLite
+- Have its own:
+  - Habits
+  - Friends
+  - Notifications
+
+--------------------------------------------------
+USER-SPECIFIC DATA
+--------------------------------------------------
+- When a new user registers:
+  - Assign them a unique set of fake friends
+  - Initialize empty notifications
+- Friends and notifications must be different per user
+- Use user_id to link:
+  - Habits
+  - Friends
+  - Notifications
+
+--------------------------------------------------
+TAB STRUCTURE (MOBILE STYLE)
+--------------------------------------------------
+Bottom navigation tabs:
+1. Habits
+2. Friends
+3. Notifications
+4. Goals
+
+Tabs should switch content using JavaScript (no page reloads).
+
+--------------------------------------------------
+FRIENDS TAB (MATCH NOTIFICATIONS STYLE)
+--------------------------------------------------
+The Friends tab should work similarly to Notifications:
+- Show a list of friend activity messages, such as:
+  - "Alex started a new habit: Running"
+  - "Jordan reached a 7-day streak on Reading"
+- Messages should include:
+  - Friend name
+  - Action
+  - Time
+- Clicking a friend message can show:
+  - The habits that friend is working on
+  - Their streak counts
+- All friend activity is system-generated and read-only
+
+--------------------------------------------------
+NOTIFICATIONS TAB (USER + FRIEND EVENTS)
+--------------------------------------------------
+Notifications tab should include:
+1. Motivational messages for the user
+2. Friend activity updates
+
+Examples:
+- "You’re doing great — keep building your streak!"
+- "Taylor just hit a 10-day streak!"
+
+Notifications should:
+- Be stored per user
+- Show newest messages first
+- Include timestamps
+- Be clearly labeled (Motivation / Friend Update)
+
+--------------------------------------------------
+GOALS TAB
+--------------------------------------------------
+- Allow users to add personal goals
+- Goals are stored per user
+- Simple add / view / delete functionality
+- Keep logic easy to understand
+
+--------------------------------------------------
+STYLING REQUIREMENTS
+--------------------------------------------------
+- Mobile-first design
+- Add light color accents:
+  - Header background
+  - Buttons
+  - Active tab highlight
+- Avoid dark or complex themes
+- Clean spacing and padding
+- Large touch-friendly buttons
+
+--------------------------------------------------
+CODE STYLE REQUIREMENTS
+--------------------------------------------------
+- Beginner-level JavaScript
+- Simple SQL queries
+- Clear variable names
+- Helpful comments explaining logic
+- No frameworks beyond Express
+- No advanced patterns
+
+--------------------------------------------------
+DELIVERABLE
+--------------------------------------------------
+- App runs immediately in Replit
+- Separate login and register pages
+- User-specific friends and notifications
+- Friends tab mirrors notification-style updates
+- App branding updated to "Habit Flow"
+- Code looks like it was written by a student

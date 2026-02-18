@@ -1,0 +1,86 @@
+Extend the existing beginner-friendly Node.js Habit Tracker app with a tab-based interface.
+All new code must remain simple, readable, and easy for a beginner to understand.
+
+IMPORTANT:
+- Do NOT refactor the app into complex frameworks
+- Use basic HTML, CSS, and JavaScript only
+- Add clear comments explaining each new feature
+- Keep logic simple and linear
+- Avoid advanced design patterns
+
+UI STRUCTURE:
+Add a simple tab navigation bar at the bottom of the screen (mobile-app style) with these tabs:
+1. Habits
+2. Friends
+3. Notifications
+4. Goals
+
+Each tab should show/hide content using JavaScript (no page reloads).
+
+--------------------------------------------------
+TAB 1: HABITS
+--------------------------------------------------
+- Keep the existing habit tracker functionality
+- Show habit name, current streak, and a "Complete" button
+- Simple progress indicator (text or basic bar)
+
+--------------------------------------------------
+TAB 2: FRIENDS
+--------------------------------------------------
+- Display 3–5 system-generated fake friends
+- Each friend should show:
+  - Name
+  - Total streak days
+- Allow clicking a friend to view:
+  - The habits they are working on
+  - The streak count for each habit
+- Friend data is static or randomly generated
+- Friends are read-only (no interaction)
+
+--------------------------------------------------
+TAB 3: NOTIFICATIONS (AI MESSAGES)
+--------------------------------------------------
+- Create a notification list for motivational messages
+- If a user has not completed a habit in 2+ days:
+  - Add a motivational message to this tab
+- Messages can be selected from a simple array of strings
+- Show newest messages at the top
+- No real AI API required
+
+--------------------------------------------------
+TAB 4: GOALS
+--------------------------------------------------
+- Allow users to create personal goals
+  Examples:
+  - "Exercise 5 days a week"
+  - "Study 2 hours per day"
+- Each goal should include:
+  - Goal name
+  - Optional target number
+- Allow goals to be:
+  - Added
+  - Viewed
+  - Deleted
+- Goals should be stored in SQLite
+- Keep goal logic very simple
+
+--------------------------------------------------
+BACKEND REQUIREMENTS:
+- Add a new SQLite table for goals
+- Store notifications in memory or database (simple approach)
+- Protect all routes so only logged-in users can access them
+
+--------------------------------------------------
+CODE STYLE REQUIREMENTS:
+- Beginner-level JavaScript
+- Simple SQL queries
+- Clear variable names
+- Helpful comments
+- Avoid unnecessary abstractions
+
+--------------------------------------------------
+DELIVERABLE:
+- App must still run immediately in Replit
+- All features must be accessible via tabs
+- Code must look like a student project
+- All files must remain editable and exportable

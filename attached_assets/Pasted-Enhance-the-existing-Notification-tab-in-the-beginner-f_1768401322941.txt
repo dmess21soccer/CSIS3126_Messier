@@ -1,0 +1,72 @@
+Enhance the existing Notification tab in the beginner-friendly Habit Tracker app.
+
+IMPORTANT RULES:
+- Keep all code simple and easy to understand
+- No advanced JavaScript patterns
+- Use clear comments
+- Write code as if a student built it
+
+--------------------------------------------------
+NOTIFICATION TAB CONTENT
+--------------------------------------------------
+The Notifications tab should display a simple list of messages.
+Messages should come from two sources:
+1. AI-style motivational messages for the user
+2. Friend activity updates (system-generated)
+
+--------------------------------------------------
+AI MOTIVATIONAL MESSAGES (SIMPLE LOGIC)
+--------------------------------------------------
+- If a user has not completed a habit in 2+ days:
+  - Add an encouraging message such as:
+    - "You’re only one step away from getting back on track!"
+    - "Small progress is still progress — keep going!"
+    - "Don’t worry about yesterday, focus on today."
+- Messages should be selected from a simple array
+- No real AI API required
+- Messages should include a timestamp
+
+--------------------------------------------------
+FRIEND ACTIVITY NOTIFICATIONS
+--------------------------------------------------
+Generate system messages such as:
+- "Alex started a new habit: Morning Run"
+- "Jordan hit a 10-day streak on Reading"
+- "Taylor reached a weekly goal!"
+
+IMPLEMENTATION NOTES:
+- Friend activity is fake and system-generated
+- Messages can be randomly generated on page load
+- Messages can be stored:
+  - In memory, OR
+  - In a simple SQLite table (preferred but optional)
+- Messages should be clearly labeled:
+  - "Motivation"
+  - "Friend Update"
+
+--------------------------------------------------
+UI REQUIREMENTS
+--------------------------------------------------
+- Notifications appear in a scrollable list
+- Newest messages appear at the top
+- Each message shows:
+  - Type (Motivation or Friend Update)
+  - Message text
+  - Time (simple format)
+
+--------------------------------------------------
+CODE STYLE
+--------------------------------------------------
+- Use basic loops and conditionals
+- Avoid complex date libraries
+- Clear variable names
+- Comments explaining what each section does
+
+--------------------------------------------------
+DELIVERABLE
+--------------------------------------------------
+- Notifications tab shows both:
+  - Encouraging messages
+  - Friend activity updates
+- App remains beginner-friendly
+- All code remains editable and exportable
